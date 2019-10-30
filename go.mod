@@ -11,6 +11,9 @@ require (
 	github.com/pkg/errors v0.8.1
 )
 
-replace github.com/asticode/go-astilectron => ../go-astilectron
+// uncomment following line for local development of go-astilectron
+//
+// replace github.com/asticode/go-astilectron => ../go-astilectron
 
-replace github.com/asticode/go-astilectron-bundler => ../go-astilectron-bundler
+//
+// replace github.com/asticode/go-astilectron-bundler => ../go-astilectron-bundler

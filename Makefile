@@ -1,5 +1,12 @@
-export ASTIELECTRON_BUNDLER_EXECUTABLE := $(shell command -v astilectron-bundler  2> /dev/null)
 export BIN_DIR := ./output
+
+####################################################################################################################
+##
+## astilectron-bundler check
+##
+####################################################################################################################
+
+export ASTIELECTRON_BUNDLER_EXECUTABLE := $(shell command -v astilectron-bundler  2> /dev/null)
 
 
 build_info: check_prereq ## Build the container
@@ -50,6 +57,7 @@ fmt: ## run fmt
 demo: build_info ## build demo binary in bin dir
 	@echo "build demo"
 	@rm -f ./bind.go
+	@rm -rf ./output
 	astilectron-bundler -v cc
 	@echo ''
 	@echo ''
